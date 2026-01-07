@@ -1,0 +1,50 @@
+/* Step 00: Create raw tables (Apr 2020 / Apr 2021)
+   Notes:
+   - Raw tables store data as TEXT to avoid load/parsing issues.
+   - Cleaning/typing happens in 02_create_clean_tables.sql
+*/
+
+CREATE DATABASE IF NOT EXISTS flight_delay;
+USE flight_delay;
+
+DROP TABLE IF EXISTS flight_delay.flight_ontime_raw_2020_04;
+CREATE TABLE flight_delay.flight_ontime_raw_2020_04 (
+  YEAR TEXT,
+  MONTH TEXT,
+  FL_DATE TEXT,
+  OP_UNIQUE_CARRIER TEXT,
+  OP_CARRIER_AIRLINE_ID TEXT,
+  ORIGIN TEXT,
+  ORIGIN_CITY_NAME TEXT,
+  ORIGIN_STATE_NM TEXT,
+  DEST TEXT,
+  DEST_CITY_NAME TEXT,
+  DEST_STATE_NM TEXT,
+  DEP_DELAY TEXT,
+  DEP_DEL15 TEXT,
+  ARR_DELAY TEXT,
+  ARR_DEL15 TEXT,
+  CANCELLED TEXT,
+  CANCELLATION_CODE TEXT
+);
+
+DROP TABLE IF EXISTS flight_delay.flight_ontime_raw_2021_04;
+CREATE TABLE flight_delay.flight_ontime_raw_2021_04 (
+  YEAR TEXT,
+  MONTH TEXT,
+  FL_DATE TEXT,
+  OP_UNIQUE_CARRIER TEXT,
+  OP_CARRIER_AIRLINE_ID TEXT,
+  ORIGIN TEXT,
+  ORIGIN_CITY_NAME TEXT,
+  ORIGIN_STATE_NM TEXT,
+  DEST TEXT,
+  DEST_CITY_NAME TEXT,
+  DEST_STATE_NM TEXT,
+  DEP_DELAY TEXT,
+  DEP_DEL15 TEXT,
+  ARR_DELAY TEXT,
+  ARR_DEL15 TEXT,
+  CANCELLED TEXT,
+  CANCELLATION_CODE TEXT
+);
