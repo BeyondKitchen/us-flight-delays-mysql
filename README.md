@@ -119,9 +119,11 @@ The dashboard enables users to:
 ```text
 us-flight-delays-mysql/
 ├── sql/
-│   ├── kpi_queries.sql
-│   ├── carrier_analysis.sql
-│   └── route_analysis.sql
+│   ├── 00_create_raw_tables.sql
+│   ├── 01_load_raw_template.sql
+│   ├── 02_create_clean_tables.sql
+│   ├── 03_create_dim_carrier.sql
+│   └── 04_analysis_queries.sql
 └── README.md
 ```
 ---
